@@ -22,5 +22,5 @@ make lint:
 		poetry run flake8 gendiff
 
 
-make test-coverage:
+make-test-coverage:
 		pytest --cov=tests

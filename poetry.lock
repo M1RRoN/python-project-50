@@ -72,4 +72,5 @@ prompt = []
 pycodestyle = []
 pyflakes = []
 pytest = []
+attrs = []
 

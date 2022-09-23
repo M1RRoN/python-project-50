@@ -45,6 +45,14 @@ optional = false
 python-versions = ">=3.3"
 
 [[package]]
+name = "pluggy"
+version = "1.0.0"
+description = "plugin and hook calling mechanisms for python"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "pycodestyle"
 version = "2.8.0"
 description = "Python style guide checker"
@@ -73,4 +81,5 @@ pycodestyle = []
 pyflakes = []
 pytest = []
 attrs = []
+pluggy = []
 

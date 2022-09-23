@@ -30,6 +30,14 @@ category = "dev"
 optional = false
 python-versions = ">=3.7"
 
+[[package]]
+name = "pycodestyle"
+version = "2.9.1"
+description = "Python style guide checker"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
 [package.dependencies]
 mccabe = ">=0.6.0,<0.7.0"
 pycodestyle = ">=2.8.0,<2.9.0"
@@ -39,6 +47,7 @@ pluggy = ">=0.12,<2.0"
 py = ">=1.8.2"
 iniconfig = "*"
 tomli = ">=1.0.0"
+pycodestyle = ">=2.9.0,<2.10.0"
 
 [[package]]
 name = "py"
@@ -113,3 +122,4 @@ pluggy = []
 py = []
 iniconfig = []
 tomli = []
+pycodestyle = []

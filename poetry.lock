@@ -28,6 +28,15 @@ pycodestyle = ">=2.8.0,<2.9.0"
 pyflakes = ">=2.4.0,<2.5.0"
 attrs = ">=19.2.0"
 pluggy = ">=0.12,<2.0"
+py = ">=1.8.2"
+
+[[package]]
+name = "py"
+version = "1.11.0"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "mccabe"
@@ -83,4 +92,4 @@ pyflakes = []
 pytest = []
 attrs = []
 pluggy = []
-
+py = []

@@ -1,5 +1,7 @@
 name: CI check
+
 on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,22 +10,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
-      # make depends on poetry
-      - name: Install dependencies
+          python-version: 3.8
+      - name: install dependencies
         run: |
-          pip install poetry
+          pip install poetry flake8 pytest
           make install
       - name: Run linter
-        run: |
-          make lint
-      - name: Run Tests
-        run: |
-          make test
-      - name: Test & publish code coverage
+        run: make lint
+      - name: Run tests
+        run: make test
+      - name: Code Coverage
         uses: paambaati/codeclimate-action@v3.0.0
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE }}
+          CC_TEST_REPORTER_ID: 4f804d1381ef468f39911b55b9aeec541d22ecd2438c25ac68d92b996fcc5a32
         with:
           coverageCommand: make test-coverage
           debug: true

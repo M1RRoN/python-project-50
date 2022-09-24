@@ -1,4 +1,5 @@
 from gendiff.engine import generate_diff, run_gendiff
+
 import pytest
 
 
@@ -16,3 +17,8 @@ def test_generate_diff_wrong_format():
 def test_generate_diff():
     answer = open('tests/fixtures/result.txt')
     assert run_gendiff('tests/fixtures/file1.json', 'tests/fixtures/file2.json') == print(answer)
+
+
+def test_generate_diff_yaml():
+    test = open('tests/fixtures/result.txt')
+    assert run_gendiff('tests/fixtures/file1.yaml', 'tests/fixtures/file2.yaml') == print(test)

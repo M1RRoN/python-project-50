@@ -1,5 +1,4 @@
 from gendiff.engine import generate_diff, run_gendiff
-
 import pytest
 
 

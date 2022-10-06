@@ -25,3 +25,15 @@
 **Сравнение двух плоских файлов: YAML(YML).**
 
 [![asciicast](https://asciinema.org/a/Kk8dtomDr4D0pj1JZFvexlC6q.svg)](https://asciinema.org/a/Kk8dtomDr4D0pj1JZFvexlC6q)
+
+**Сравнение двух файлов c рекурсивной структурой: YAML(YML) или JSON.**
+
+[![asciicast](https://asciinema.org/a/Z3Kmjq3CtGRciJGYEv0xGgVN5.svg)](https://asciinema.org/a/Z3Kmjq3CtGRciJGYEv0xGgVN5)
+
+Плоский формат отображения - cравнение двух файлов c рекурсивной структурой YAML(YML) или JSON.
+
+[![asciicast](https://asciinema.org/a/lnEeDo5bboPNiL0JCViEWZlOO.svg)](https://asciinema.org/a/lnEeDo5bboPNiL0JCViEWZlOO)
+
+Вывод результата сравнения в формате JSON.
+
+[![asciicast](https://asciinema.org/a/323hjECF1E2maaJY8K0DwaCok.svg)](https://asciinema.org/a/323hjECF1E2maaJY8K0DwaCok)

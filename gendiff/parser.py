@@ -3,7 +3,7 @@ import yaml
 from yaml.loader import SafeLoader
 
 
-def parser(file_path):
+def parse(file_path):
     format = (file_path.split('.'))[1]
     with open(file_path) as file:
         if format.lower() == 'json':

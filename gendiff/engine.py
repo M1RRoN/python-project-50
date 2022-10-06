@@ -1,28 +1,25 @@
-import json
-from gendiff.parse import parser
-from os.path import normpath
+import os
+from gendiff.parser import parse
+from gendiff.tree import build_tree
+from gendiff.formatters import formatting
 
 
-def run_gendiff(file_path1, file_path2):
-    file_path1 = normpath(file_path1)
-    file_path2 = normpath(file_path2)
-    file1 = parser(file_path1)
-    file2 = parser(file_path2)
-    print(generate_diff(file1, file2))
+def get_file_extension(file_path: str) -> str:
+    _, file_extension = os.path.splitext(file_path)
+    return file_extension
 
 
-def generate_diff(data1, data2):
-    diff = {}
-    for key in data1.keys():
-        item1 = data1[key]
-        if key not in data2.keys():
-            diff[f'- {key}'] = item1
-        elif item1 == data2[key]:
-            diff[f'  {key}'] = data2.pop(key)
-        else:
-            diff[f'- {key}'] = item1
-    if data2:
-        diff.update({f'+ {key}': item for key, item in data2.items()})
-    sorted_diff = dict(sorted(diff.items(), key=lambda x: x[0][2:]))
-    return (str(json.dumps(sorted_diff, indent=2,
-                           separators=('', ': ')))).replace('"', '')
+def get_file_data(file_path: str) -> str:
+    file_extension = get_file_extension(file_path)
+    file_data = parse(file_path, file_extension)
+    return file_data
+
+
+def generate_diff(file_path1: str,
+                  file_path2: str,
+                  format_name="stylish") -> str:
+    dict_1 = dict(get_file_data(file_path1))
+    dict_2 = dict(get_file_data(file_path2))
+    tree = build_tree(dict_1, dict_2)
+    diff = formatting(tree, format_name)
+    return diff

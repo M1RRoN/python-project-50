@@ -1,6 +1,3 @@
-"""Plain module - apply plain view to diff"""
-
-
 def to_string(value):
     if isinstance(value, dict):
         return '[complex value]'

@@ -10,3 +10,5 @@ def parser(file_path):
             return json.load(file)
         elif format.lower() == 'yml' or format.lower() == 'yaml':
             return yaml.load(file, Loader=SafeLoader)
+
+    raise ValueError('Unknown file format')

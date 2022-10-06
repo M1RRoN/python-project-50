@@ -1,6 +1,3 @@
-"""Build internal tree view"""
-
-
 def make_tree(dict_1: dict, dict_2: dict) -> list:
     keys = dict_1.keys() | dict_2.keys()
 

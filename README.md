@@ -1,27 +1,62 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/M1RRoN/python-project-50/workflows/hexlet-check/badge.svg)](https://github.com/M1RRoN/python-project-50/actions)
-[![CI check](https://github.com/M1RRoN/python-project-50/actions/workflows/main.yml/badge.svg)](https://github.com/M1RRoN/python-project-50/actions/workflows/main.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d2f4d9e4f85b93802db9/maintainability)](https://codeclimate.com/github/M1RRoN/python-project-50/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d2f4d9e4f85b93802db9/test_coverage)](https://codeclimate.com/github/M1RRoN/python-project-50/test_coverage)
+# Вычислитель отличий:
 
-# DESCRIPTION:
+[![Actions Status](https://github.com/DzmitrySha/python-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/DzmitrySha/python-project-lvl2/actions)
+[![workflow](https://github.com/DzmitrySha/python-project-lvl2/actions/workflows/pyci-check.yml/badge.svg)](https://github.com/DzmitrySha/python-project-lvl2/actions/workflows/pyci-check.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/14d8f0ef4843b93cd1d9/maintainability)](https://codeclimate.com/github/DzmitrySha/python-project-lvl2/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/14d8f0ef4843b93cd1d9/test_coverage)](https://codeclimate.com/github/DzmitrySha/python-project-lvl2/test_coverage)
 
-**Вычислитель отличий**
+---
 
-Запускается из командной строки и вычисляет отличия между двумя файлами. На данный момент работает с JSON и YAML.
+## Инструкции
 
 **Запуск справки:**
 
 `gendiff -h`
 
-**Запуск скрипта c настройками по-умолчанию:**
+**Запуск скрипта c настройками по-умолчанию:** 
 
 `gendiff <file_path1> <file_path2>`
 
-**Сравнение двух плоских файлов: JSON.**
+**Запуск скрипта с выбором формата вывода:** 
 
-[![asciicast](https://asciinema.org/a/3zhWyxxhT1EtmCFJsu5xe99Wv.svg)](https://asciinema.org/a/3zhWyxxhT1EtmCFJsu5xe99Wv)
+`gendiff -f {stylish, plain, json} <file_path1> <file_path2>`
 
-**Сравнение двух плоских файлов: YAML(YML).**
 
-[![asciicast](https://asciinema.org/a/Kk8dtomDr4D0pj1JZFvexlC6q.svg)](https://asciinema.org/a/Kk8dtomDr4D0pj1JZFvexlC6q)
+## Примеры работы скрипта "Вычислитель отличий"
+
+---
+
+Сравнение двух плоских файлов: JSON.
+
+[![asciicast](https://asciinema.org/a/B2pi2NsEY6WNM7aU9OBIBodvM.svg)](https://asciinema.org/a/B2pi2NsEY6WNM7aU9OBIBodvM)
+
+---
+
+Сравнение двух плоских файлов: YAML(YML).
+
+[![asciicast](https://asciinema.org/a/6goaDnMwFvwPpbIWO2NhsC3Sq.svg)](https://asciinema.org/a/6goaDnMwFvwPpbIWO2NhsC3Sq)
+
+---
+
+Сравнение двух файлов c рекурсивной структурой: YAML(YML) или JSON.
+
+[![asciicast](https://asciinema.org/a/6jZ3XV9H5TrxOdujYCRSfI1rg.svg)](https://asciinema.org/a/6jZ3XV9H5TrxOdujYCRSfI1rg)
+
+---
+
+Плоский формат отображения - cравнение двух файлов c рекурсивной структурой YAML(YML) или JSON.
+
+[![asciicast](https://asciinema.org/a/3L3J2MUTMNwJSQZ3Q9UkiaxNf.svg)](https://asciinema.org/a/3L3J2MUTMNwJSQZ3Q9UkiaxNf)
+
+---
+
+Вывод результата сравнения в формате JSON.
+
+[![asciicast](https://asciinema.org/a/IqWwqnjCVx7z6BTszNQyYmDQA.svg)](https://asciinema.org/a/IqWwqnjCVx7z6BTszNQyYmDQA)
+
+
+---
+
+Результат работы скрипта - строка, с обнаруженными в файлах отличиями. 
+
+_Отсутствие плюса или минуса говорит о том, что ключ есть в обоих файлах, и его значения совпадают. Во всех остальных ситуациях значение по ключу либо отличается, либо ключ есть только в одном файле._ 

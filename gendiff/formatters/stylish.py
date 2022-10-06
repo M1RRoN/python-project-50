@@ -24,7 +24,7 @@ def to_string(value, depth: int) -> str:
     return value
 
 
-def iter_(node: dict, depth=0) -> str: # noqa: ignore=C901
+def iter_(node: dict, depth=0) -> str:
     children = node.get('children')
     indent = get_indent(depth)
     formatted_value = to_string(node.get('value'), depth)

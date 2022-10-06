@@ -1,14 +1,11 @@
 import json
 import yaml
-from yaml.loader import SafeLoader
 
 
-def parse(file_path):
-    format = (file_path.split('.'))[1]
-    with open(file_path) as file:
-        if format.lower() == 'json':
-            return json.load(file)
-        elif format.lower() == 'yml' or format.lower() == 'yaml':
-            return yaml.load(file, Loader=SafeLoader)
+def parse(data, format_name):
+    if format_name == '.json':
+        return json.load(open(data))
+    if format_name in ('.yml', '.yaml'):
+        return yaml.safe_load(open(data))
 
     raise ValueError('Unknown file format')

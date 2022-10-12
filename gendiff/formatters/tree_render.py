@@ -1,6 +1,6 @@
 from typing import Callable
 
-from gendiff.formatters.stylish import render_stylish
+from gendiff.formatters.format_stylish import render_stylish
 from gendiff.formatters.plain import render_plain
 from gendiff.formatters.json import render_json
 
